@@ -191,12 +191,14 @@ W: while, with
 
 # Tipos de Datos
 
+## Var vs Let
+
 ### Lista de extenciones para Visual Studio Code
 * ESLint
 * Live Server
 * Prettier - Code formatter
 
-## Alcance de varibales
+### Alcance de varibales
 
 ```
 # Suele ser una mala practica.
@@ -232,6 +234,7 @@ Variable antes del Bloque : Rock
 Variable dentro del bloque : Pop
 Variable despues del Bloque : Rock
 ```
+
 
 
 # Estructuras de Control
