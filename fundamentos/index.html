@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=}, initial-scale=1.0">
+    <title>Fundamentos de JavaScript</title>
+</head>
+
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <script>
+        //var: Mala practica, nos puede meter en problemas.
+        var global = 'ambito global'
+        console.log(global)
+        let bloque = 'ambito de bloque'
+        console.log(bloque)
+            // Ambito de bloque - Global
+            // Esto es un bloque - Comentario de una linea
+            /*Esto es un bloque - Comentario de varias lineas*/
+        var musica = 'Rock'
+        console.log("Variable antes del Bloque :", musica); {
+            var musica = 'Pop'
+            console.log("Variable dentro del bloque :", musica)
+        }
+        console.log("Variable despues del Bloque :", musica);
+        // Ambito de bloque - Local
+        let musica_let = 'Rock'
+        console.log("Variable antes del Bloque :", musica_let); {
+            let musica_let = 'Pop'
+            console.log("Variable dentro del bloque :", musica_let)
+        }
+        console.log("Variable despues del Bloque :", musica_let);
+    </script>
+</body>
+
+</html>

@@ -191,7 +191,47 @@ W: while, with
 
 # Tipos de Datos
 
+### Lista de extenciones para Visual Studio Code
+* ESLint
+* Live Server
+* Prettier - Code formatter
 
+## Alcance de varibales
+
+```
+# Suele ser una mala practica.
+var global = 'ambito global'
+# Es recomendado opara evitar problemas.
+let bloque = 'ambito de bloque'
+```
+* Ambito Global
+```
+var musica = 'Rock'
+console.log("Variable antes del Bloque :", musica); {
+    var musica = 'Pop'
+    console.log("Variable dentro del bloque :", musica)
+}
+console.log("Variable despues del Bloque :", musica);
+```
+```
+Variable antes del Bloque : Rock
+Variable dentro del bloque : Pop
+Variable despues del Bloque : Pop
+```
+* Ambito Local
+```
+let musica_let = 'Rock'
+console.log("Variable antes del Bloque :", musica_let); {
+    let musica_let = 'Pop'
+    console.log("Variable dentro del bloque :", musica_let)
+}
+console.log("Variable despues del Bloque :", musica_let);
+```
+```
+Variable antes del Bloque : Rock
+Variable dentro del bloque : Pop
+Variable despues del Bloque : Rock
+```
 
 
 # Estructuras de Control
