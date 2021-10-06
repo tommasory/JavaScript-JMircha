@@ -235,6 +235,44 @@ Variable dentro del bloque : Pop
 Variable despues del Bloque : Rock
 ```
 
+## Constantes (const)
+
+### Variables constantes - Primitivos
+* Estas variables se deben definir desde el principio y no puede cdambiar en el tiempo.
+* Se definen en mayuscula.
+```
+const PI = 3.1416
+console.log("Numero PI - Variable constante:", PI)
+```
+```
+Numero PI - Variable constante: 3.1416
+```
+
+### Variables compuestas
+En las variables compuestas las constantes si pueden cambiar, en este caso las declaramos de tipo **LET**, pero si estuvieran de tipo **CONST** no pasa nada.
+* Objetos
+```
+let objeto = {
+    nombre: 'Tomas Escobar',
+    edad: 23
+}
+console.log(objeto)
+// Agregar una nueva propiedad en el objeto
+objeto.correo = 'tomasj@unicauca.edu.co'
+```
+```
+{nombre: 'Tomas Escobar', edad: 23, correo: 'tomasj@unicauca.edu.co'}
+```
+* Arreglos
+```
+let colores = ['rojo', 'verde', 'amarillo']
+// Agregar nuevo item
+colores.push('blanco')
+console.log(colores)
+```
+```
+['rojo', 'verde', 'amarillo', 'blanco']
+```
 
 
 # Estructuras de Control
