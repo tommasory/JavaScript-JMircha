@@ -274,6 +274,23 @@ console.log(colores)
 ['rojo', 'verde', 'amarillo', 'blanco']
 ```
 
+## Cadenas de Texto (Strings)
+
+### Sitio web para desarrolladores - JavaScript
+Nos sirve para mirar si llegamos a tener duda en cualquier duda en JavaScript [MDN Web Docs](https://developer.mozilla.org/es/).
+
+* Cadenas de texto - [more information](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String)
+
+```
+let nombre = 'Tomas Jesus'
+console.log(nombre)
+let apellido = new String('Escobar Cueltan')
+console.log(apellido)
+```
+```
+Tomas Jesus
+String {'Escobar Cueltan'}
+```
 
 # Estructuras de Control
 
