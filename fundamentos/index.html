@@ -10,6 +10,7 @@
 
 <body>
     <h1>Fundamentos de JavaScript</h1>
+
     <script>
         //var: Mala practica, nos puede meter en problemas.
         var global = 'ambito global'
@@ -49,13 +50,32 @@
                 // Agregar nuevo item
             colores.push('blanco')
             console.log(colores)
-            */
+            
 
         let nombre = 'Tomas Jesus'
         console.log(nombre)
         let apellido = new String('Escobar Cueltan')
         console.log(apellido)
         console.log(nombre.toLocaleUpperCase())
+        */
+
+        let nombre = 'Tomas Jesus'
+        let apellido = 'Escobar Cueltan'
+        let nombre_completo = nombre + ' ' + apellido
+        console.log(nombre_completo)
+
+        let saludo = `Hola mi nombre es ${nombre.toLocaleUpperCase()} ${apellido.toLocaleUpperCase()}`
+        console.log(saludo)
+
+        let ul = `
+        <ul>
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+        </ul>
+        `
+        console.log(ul)
     </script>
 </body>
 

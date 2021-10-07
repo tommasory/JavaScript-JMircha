@@ -292,6 +292,52 @@ Tomas Jesus
 String {'Escobar Cueltan'}
 ```
 
+## Plantillas de cadenas de texto ( Template Strings )
+
+* Concatenación
+```
+let nombre = 'Tomas Jesus'
+let apellido = 'Escobar Cueltan'
+let nombre_completo = nombre + ' ' + apellido
+console.log(nombre_completo)
+```
+```
+Tomas Jesus Escobar Cueltan
+```
+
+* Interpolación de variables
+```
+let nombre = 'Tomas Jesus'
+let apellido = 'Escobar Cueltan'
+let saludo = `Hola mi nombre es ${nombre.toLocaleUpperCase()} ${apellido.toLocaleUpperCase()}`
+console.log(saludo)
+```
+```
+Hola mi nombre es TOMAS JESUS ESCOBAR CUELTAN
+```
+
+* Template String
+```
+let ul = `
+<ul>
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+</ul>
+`
+console.log(ul)
+```
+```
+<ul>
+    <li>Primavera</li>
+    <li>Verano</li>
+    <li>Otoño</li>
+    <li>Invierno</li>
+</ul>
+```
+
+
 # Estructuras de Control
 
 
