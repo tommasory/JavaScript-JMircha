@@ -337,6 +337,38 @@ console.log(ul)
 </ul>
 ```
 
+## Números (Numbers)
+* Declaración
+```
+let num_a = 2
+let num_b = new Number(2)
+let num_c = 1.7
+console.log(num_a)
+console.log(num_b)
+console.log(num_c)
+```
+```
+2
+Number {2}
+1.7
+```
+* Metodos
+```
+let d = "5.6"
+let e = 7.19
+let f = 5
+console.log(typeof d)
+console.log(typeof e)
+console.log(e + parseInt(d))
+console.log(e + parseFloat(d))
+```
+```
+string
+number
+12.190000000000001
+12.79
+```
+
 
 # Estructuras de Control
 
