@@ -369,6 +369,56 @@ number
 12.79
 ```
 
+## Booleans
+
+* Declaración
+```
+let verdadero = true
+let falso = false
+console.log(verdadero)
+console.log(falso)
+console.log(typeof verdadero)
+```
+```
+true
+false
+boolean
+```
+* Metodos - Truthy
+En JavaScript, un valor verdadero es un valor que se considera  true/verdadero cuando es evaluado en un contexto Booleano. Todos los valores son verdaderos a menos que se definan como falso (es decir, excepto false, 0, "", null, undefined, y NaN).
+
+**True**
+```
+console.log(Boolean(true))
+console.log(Boolean({}))
+console.log(Boolean([]))
+console.log(Boolean(42))
+console.log(Boolean("foo"))
+console.log(Boolean(new Date()))
+console.log(Boolean(-42))
+console.log(Boolean(3.14))
+console.log(Boolean(-3.14))
+console.log(Boolean(Infinity))
+console.log(Boolean(-Infinity))
+```
+```
+true
+...
+```
+**False**
+```
+console.log(Boolean(false))
+console.log(Boolean(null))
+console.log(Boolean(undefined))
+console.log(Boolean(0))
+console.log(Boolean(-0))
+console.log(Boolean(NaN))
+console.log(Boolean(""))
+```
+```
+false
+...
+```
 
 # Estructuras de Control
 
