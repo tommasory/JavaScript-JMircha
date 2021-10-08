@@ -119,7 +119,7 @@
         console.log(Boolean(NaN))
         console.log(Boolean(""))
 
-        */
+        
         var variable;
         if (typeof variable === "undefined") {
             console.log('ok');
@@ -130,6 +130,37 @@
         }
         console.log(Math.sqrt(-1))
         console.log(parseInt('no'))
+        
+
+        function saludoPersona(nombre_estudiante) {
+            console.log(`Hola ${nombre_estudiante}, bienvenido a unicauca.`)
+        }
+        saludoPersona("Tomas Escobar")
+        saludoPersona("Freider Escobar")
+
+        function sumarEdad(edad) {
+            let edadAux = edad + 10
+            return edadAux
+        }
+        console.log(`Hola, dentro de 10 años tendras ${sumarEdad(23)} años.`)
+        console.log(`Hola, dentro de 10 años tendras ${sumarEdad(20)} años.`)
+
+        function saludDepartamento(departamento = 'Putumayo') {
+            console.log(`Hola, bienvenido al ${departamento}`)
+        }
+        saludDepartamento()
+        saludDepartamento('Cauca')
+        saludDepartamento('Casanare')
+
+        const operacionesBasicas = function(a, b) {
+            console.log(`La suma de ${a} mas ${b} es : ${a+b}`)
+            console.log(`La resta de ${a} menos ${b} es : ${a-b}`)
+            console.log(`La multiplicación de ${a} por ${b} es : ${a*b}`)
+            console.log(`La division de ${a} entre ${b} es : ${a/b}`)
+        }
+        operacionesBasicas(4, 2)
+        operacionesBasicas(16, 8)
+        */
     </script>
 </body>
 

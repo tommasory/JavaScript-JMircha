@@ -460,6 +460,82 @@ NaN
 NaN
 ```
 
+## Funciones - Declaradas, Expresadas
+**Declaradas**: Se pueden acceder **antes** de ser declaradas.
+
+**Expresadas**: Se pueden acceder **despues** de ser declaradas.
+
+* Paso de parametros - Sin retorno
+```
+function saludoPersona(nombre_estudiante) {
+    console.log(`Hola ${nombre_estudiante}, bienvenido a unicauca.`)
+}
+saludoPersona("Tomas Escobar")
+saludoPersona("Freider Escobar")
+```
+```
+Hola Tomas Escobar, bienvenido a unicauca.
+Hola Freider Escobar, bienvenido a unicauca.
+```
+
+* Paso de parametros - Con retorno
+```
+function sumarEdad(edad) {
+    let edadAux = edad + 10
+    return edadAux
+}
+console.log(`Hola, dentro de 10 años tendras ${sumarEdad(23)} años.`)
+console.log(`Hola, dentro de 10 años tendras ${sumarEdad(20)} años.`)
+```
+```
+Hola, dentro de 10 años tendras 33 años.
+Hola, dentro de 10 años tendras 30 años.
+```
+* Funciones declaradas - Parametros con valor por defecto
+```
+function saludDepartamento(departamento = 'Putumayo') {
+    console.log(`Hola, bienvenido al ${departamento}`)
+}
+saludDepartamento()
+saludDepartamento('Cauca')
+saludDepartamento('Casanare')
+```
+```
+Hola, bienvenido al Putumayo
+Hola, bienvenido al Cauca
+Hola, bienvenido al Casanare
+```
+* Funciones expresadas o anonimas
+**Ejemplo**
+```
+const operacionesBasicas = function(a, b) {
+    console.log(`La suma de ${a} mas ${b} es : ${a+b}`)
+    console.log(`La resta de ${a} menos ${b} es : ${a-b}`)
+    console.log(`La multiplicación de ${a} por ${b} es : ${a*b}`)
+    console.log(`La division de ${a} entre ${b} es : ${a/b}`)
+}
+```
+**Primer llamado**
+```
+operacionesBasicas(4, 2)
+```
+```
+La suma de 4 mas 2 es : 6
+La resta de 4 menos 2 es : 2
+La multiplicación de 4 por 2 es : 8
+La division de 4 entre 2 es : 2
+```
+**Segundo llamado**
+```
+operacionesBasicas(16, 8)
+```
+```
+La suma de 16 mas 8 es : 24
+La resta de 16 menos 8 es : 8
+La multiplicación de 16 por 8 es : 128
+La division de 16 entre 8 es : 2
+```
+
 # Estructuras de Control
 
 
