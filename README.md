@@ -420,6 +420,46 @@ false
 ...
 ```
 
+## undefined, null & NaN
+* undefined
+Cuando una variable ha quedado sin definir tiene un valor especial denominado undefined, que se podría traducir como «sin definir«. Este valor puede resultar un poco desconcertante, ya que además de un tipo de datos, existe una variable con ese nombre y también es un valor como tal.
+
+En primer lugar undefined es es un tipo de dato y por lo tanto se puede consultar con typeof.
+```
+var variable;
+if (typeof variable === "undefined") {
+    console.log('ok');
+}
+```
+```
+ok
+```
+* null
+El caso del valor nulo es también bastante singular. En este caso null es un literal definido en la especificación del lenguaje, no una variable global como en el caso undefined, por lo tanto, es una palabra reservada y no podremos utilizarla como nombre de variable.
+
+Podemos directamente utilizar el literal null para comprobar este valor es el que contiene una determinada variable o es el retorno de una función.
+```
+var variable = null;
+if (variable === null) {
+    console.log('ok');
+}
+```
+```
+ok
+```
+* NaN
+Cuando trabajamos con valores numéricos tenemos que tener en cuenta la existencia de NaN (Not a Number). Aunque realmente sí es un valor de tipo numérico, no podemos operar con él como con el resto de valores numéricos, ya que cualquier operación que se realice con NaN siempre devolverá NaN.
+
+Normalmente se obtiene NaN como resultado de las operaciones con funciones y métodos de Math donde no ha sido posible convertir un valor a numérico o se ha producido algún error. Ejemplos sencillos en los que se obtiene este tipo de valor son:
+```
+console.log(Math.sqrt(-1))
+console.log(parseInt('no'))
+```
+```
+NaN
+NaN
+```
+
 # Estructuras de Control
 
 
