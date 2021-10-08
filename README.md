@@ -586,6 +586,56 @@ arreglo.forEach(function(elemento, index) {
 <li id='7'>h</li>
 ```
 
+## Objetos
+Un objeto es una coleccion de llaves valores.
+```
+let cadena = new String("Cadena de texto")
+// Los objetos se declaran como constantes.
+const objeto = {}
+console.log(cadena)
+console.log(objeto)
+```
+```
+String {'Cadena de texto'}
+{}
+```
+* Llave Valor
+```
+const estudiante = {
+    nombre: 'Tomas Jesus',
+    apellido: 'Escobar Cueltan',
+    correro: 'tomasj@unicauca.edu.co',
+    edad: 23,
+    carrera: 'Ingenieria de sistemas',
+    soltero: false,
+    estudiante_activo: true,
+    info: function() {
+        console.log(`Nombre: ${this.nombre} ${this.apellido}`)
+        console.log(`Edad: ${this.edad}`)
+    }
+}
+console.log(estudiante.correro)
+console.log(estudiante['correro'])
+estudiante.info()
+```
+```
+tomasj@unicauca.edu.co
+tomasj@unicauca.edu.co
+Nombre: Tomas Jesus Escobar Cueltan
+Edad: 23
+```
+* Metodos - Objects
+```
+console.log(Object.keys(estudiante))
+console.log(Object.values(estudiante))
+```
+```
+['nombre', 'apellido', 'correro', 'edad', 'carrera', 'soltero', 'estudiante_activo', 'info']
+
+['Tomas Jesus', 'Escobar Cueltan', 'tomasj@unicauca.edu.co', 23, 'Ingenieria de sistemas', false, true, ƒ]
+```
+
+
 # Estructuras de Control
 
 

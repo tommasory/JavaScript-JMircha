@@ -181,6 +181,31 @@
         arreglo.forEach(function(elemento, index) {
             console.log(`<li id='${index}'>${elemento}</li>`)
         })
+        
+        let cadena = new String("Cadena de texto")
+            // Los objetos se declaran como constantes.
+        const objeto = {}
+        console.log(cadena)
+        console.log(objeto)
+        
+        const estudiante = {
+            nombre: 'Tomas Jesus',
+            apellido: 'Escobar Cueltan',
+            correro: 'tomasj@unicauca.edu.co',
+            edad: 23,
+            carrera: 'Ingenieria de sistemas',
+            soltero: false,
+            estudiante_activo: true,
+            info: function() {
+                console.log(`Nombre: ${this.nombre} ${this.apellido}`)
+                console.log(`Edad: ${this.edad}`)
+            }
+        }
+        console.log(estudiante.correro)
+        console.log(estudiante['correro'])
+        estudiante.info()
+        console.log(Object.keys(estudiante))
+        console.log(Object.values(estudiante))
         */
     </script>
 </body>
