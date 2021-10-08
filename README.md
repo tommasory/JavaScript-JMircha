@@ -536,6 +536,56 @@ La multiplicación de 16 por 8 es : 128
 La division de 16 entre 8 es : 2
 ```
 
+## Arreglos (Arrays)
+* Declaración
+```
+const a = []
+const arreglo = [9, 7.85, true, "hola", [5.2, 8, false], 3, 4, "h"]
+console.log(a)
+console.log(arreglo)
+console.log(arreglo.length)
+console.log(arreglo[4])
+// Crea un array de 50 posiciones con cero por defecto.
+const d = Array(50).fill(0)
+console.log(d)
+```
+```
+[]
+[9, 7.85, true, 'hola', Array(3), 3, 4, 'h']
+8
+[5.2, 8, false]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+```
+* Metodos
+```
+console.log(arreglo)
+arreglo.push("Thomas")
+console.log(arreglo)
+arreglo.pop()
+console.log(arreglo)
+```
+```
+(8) [9, 7.85, true, 'hola', Array(3), 3, 4, 'h']
+(9) [9, 7.85, true, 'hola', Array(3), 3, 4, 'h', 'Thomas']
+(8) [9, 7.85, true, 'hola', Array(3), 3, 4, 'h']
+```
+* Recorrer Array
+```
+arreglo.forEach(function(elemento, index) {
+    console.log(`<li id='${index}'>${elemento}</li>`)
+})
+```
+```
+<li id='0'>9</li>
+<li id='1'>7.85</li>
+<li id='2'>true</li>
+<li id='3'>hola</li>
+<li id='4'>5.2,8,false</li>
+<li id='5'>3</li>
+<li id='6'>4</li>
+<li id='7'>h</li>
+```
+
 # Estructuras de Control
 
 

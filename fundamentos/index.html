@@ -160,6 +160,27 @@
         }
         operacionesBasicas(4, 2)
         operacionesBasicas(16, 8)
+        
+
+        const a = []
+        const arreglo = [9, 7.85, true, "hola", [5.2, 8, false], 3, 4, "h"]
+        console.log(a)
+        console.log(arreglo)
+        console.log(arreglo.length)
+        console.log(arreglo[4])
+            // Crea un array de 50 posiciones con cero por defecto.
+        const d = Array(50).fill(0)
+        console.log(d)
+
+        console.log(arreglo)
+        arreglo.push("Thomas")
+        console.log(arreglo)
+        arreglo.pop()
+        console.log(arreglo)
+
+        arreglo.forEach(function(elemento, index) {
+            console.log(`<li id='${index}'>${elemento}</li>`)
+        })
         */
     </script>
 </body>
