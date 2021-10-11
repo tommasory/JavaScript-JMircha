@@ -638,6 +638,114 @@ console.log(Object.values(estudiante))
 
 # Estructuras de Control
 
+## Tipos de Operadores
+
+* Operadores Aritmeticos
+```
+let a = 20
+let b = 5
+console.log(a + b)
+console.log(a - b)
+console.log(a * b)
+console.log(a / b)
+console.log(a % b)
+```
+```
+25
+15
+100
+4
+0
+```
+* Operadores Relacionales
+```
+let a = 8
+let b = 5
+// >, <, >=, <=
+console.log(a > b)
+```
+```
+true
+```
+### Operadores Relacionales especiales
+Segun las buenas practicas de programacion, se recomienda siempre utilizar triple igual.
+* = ,Un igual es asignación de variable.
+* == ,Dos iguales es comparación de valores.
+* === ,Tres iguales es comparación de tipo de dato y de valor.
+
+1. Example one
+```
+console.log(7 == 7)
+```
+```
+true
+```
+
+2. Example two
+```
+console.log('7' == 7)
+```
+```
+true
+```
+
+3. Example three
+```
+console.log(7 === 7)
+```
+```
+true
+```
+
+4. Example four
+```
+console.log('7' === 7)
+```
+```
+false
+```
+### Operadores de decremento he incremento
+```
+let i = 12
+i++
+console.log(i)
+i--
+console.log(i)
+i += 3
+console.log(i)
+i -= 3
+console.log(i)
+i *= 3
+console.log(i)
+i /= 3
+console.log(i)
+i %= 3
+console.log(i)
+```
+```
+13
+12
+15
+12
+36
+12
+0
+```
+### Operadores logicos
+* ! ,**Not**: Niega, es decir lo que es verdadero lo vuelve falso y lo que es falso lo vuelve verdadero.
+* || ,**Or**
+* && ,**And**
+
+```
+console.log(!true)
+console.log((9 === '9') || (9 === 9))
+console.log((9 === '9') && (9 === 9))
+```
+```
+false
+true
+false
+```
 
 # Programación Orientada a Objetos
 
@@ -649,7 +757,6 @@ console.log(Object.values(estudiante))
 
 
 # Programación Asíncrona
-
 
 
 # Nuevos Tipos y Características
