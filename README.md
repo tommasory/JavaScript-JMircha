@@ -799,6 +799,77 @@ switch (dia) {
 MIERCOLES
 ```
 
+## Ciclos (Loops)
+* WHILE
+```
+let contador = 5
+while (contador < 10) {
+    console.log(contador)
+    contador++
+}
+```
+```
+5, 6, 7, 8, 9
+```
+
+* DO - WHILE
+```
+let contador = 7
+do {
+    console.log(contador)
+    contador++
+} while (contador < 10)
+```
+```
+7, 8, 9
+```
+
+* FOR
+```
+let contador = 5
+for (let index = 0; index < contador; index++) {
+    console.log(index)
+}
+```
+```
+0, 1, 2, 3, 4
+```
+
+* FOR - IN 
+```
+const estudiante = {
+    nombre: 'Tomas',
+    apellido: 'Escobar',
+    telefono: '3135673141',
+    edad: 23,
+    universidad: 'Unicauca'
+}
+for (const key in estudiante) {
+    console.log(`{ ${key} : ${estudiante[key]} }`)
+}
+```
+```
+{ nombre : Tomas }
+{ apellido : Escobar }
+{ telefono : 3135673141 }
+{ edad : 23 }
+{ universidad : Unicauca }
+```
+
+* FOR - OF 
+```
+let colores = ['rojo', 'verde', 'amarillo', 'blanco']
+for (const c of colores) {
+    console.log(c)
+}
+```
+```
+rojo
+verde
+amarillo
+blanco
+```
+
 
 # Programación Orientada a Objetos
 
