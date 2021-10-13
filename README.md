@@ -934,6 +934,31 @@ for (let i = 0; i < 5; i++) {
 0, 1, 2, 4
 ```
 
+## Destructuración
+* Arreglos []
+```
+const numeros = [1, 2, 3]
+const [one, two, three] = numeros
+console.log(`${one} - ${two} - ${three}`)
+```
+```
+1 - 2 - 3
+```
+
+* Objetos {}
+```
+let persona = {
+    nombre: 'Tomas',
+    apellido: 'Escobar',
+    edad: 23
+}
+let { nombre, apellido, edad } = persona
+console.log(`${nombre} - ${apellido} - ${edad}`)
+```
+```
+Tomas - Escobar - 23
+```
+
 # Programación Orientada a Objetos
 
 

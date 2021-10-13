@@ -144,9 +144,23 @@
             }
             console.log(i)
         }
+        
+        const numeros = [1, 2, 3]
+        const [one, two, three] = numeros
+        console.log(`${one} - ${two} - ${three}`)
+        
+        let persona = {
+            nombre: 'Tomas',
+            apellido: 'Escobar',
+            edad: 23
+        }
+        let {
+            nombre,
+            apellido,
+            edad
+        } = persona
+        console.log(`${nombre} - ${apellido} - ${edad}`)
         */
-
-
         console.log("Fin...")
     </script>
 </body>
