@@ -747,6 +747,59 @@ true
 false
 ```
 
+## Condicionales
+
+* IF - ELSE - ELSEIF
+```
+let edad = 19
+if (edad > 17) {
+    console.log('Mayor de edad.')
+} else if (edad < 18) {
+    console.log('Menor de edad.')
+} else {
+    console.log('No sabemos.')
+}
+```
+```
+Mayor de edad.
+```
+* OPERADOR TERNARIO (CONDICION)
+```
+let eresMayor = (edad > 17) ? "Mayor de edad" : "Mayor de edad"
+console.log(eresMayor)
+```
+```
+Mayor de edad
+```
+* SWITCH - CASE
+```
+let dia = 3
+switch (dia) {
+    case 1:
+        console.log("LUNES")
+        break
+    case 2:
+        console.log("MARTES")
+        break
+    case 3:
+        console.log("MIERCOLES")
+        break
+    case 4:
+        console.log("JUEVES")
+        break
+    case 5:
+        console.log("VIERNES")
+        break
+    default:
+        console.log("No existe tal día.")
+        break
+}
+```
+```
+MIERCOLES
+```
+
+
 # Programación Orientada a Objetos
 
 

@@ -11,45 +11,81 @@
 <body>
     <h1>Estructuras de control</h1>
     <script>
-        /*
-                let a = 20
-                let b = 5
-                console.log(a + b)
-                console.log(a - b)
-                console.log(a * b)
-                console.log(a / b)
-                console.log(a % b)
+        console.log("Inicio...")
+            /*
+        let a = 20
+        let b = 5
+        console.log(a + b)
+        console.log(a - b)
+        console.log(a * b)
+        console.log(a / b)
+        console.log(a % b)
 
-                let a = 8
-                let b = 5
-                    // >, <, >=, <=
-                console.log(a > b)
+        let a = 8
+        let b = 5
+            // >, <, >=, <=
+        console.log(a > b)
 
-                console.log(7 == 7)
-                console.log('7' == 7)
-                console.log(7 === 7)
-                console.log('7' === 7)
+        console.log(7 == 7)
+        console.log('7' == 7)
+        console.log(7 === 7)
+        console.log('7' === 7)
 
-                let i = 12
-                i++
-                console.log(i)
-                i--
-                console.log(i)
-                i += 3
-                console.log(i)
-                i -= 3
-                console.log(i)
-                i *= 3
-                console.log(i)
-                i /= 3
-                console.log(i)
-                i %= 3
-                console.log(i) 
-                */
-
+        let i = 12
+        i++
+        console.log(i)
+        i--
+        console.log(i)
+        i += 3
+        console.log(i)
+        i -= 3
+        console.log(i)
+        i *= 3
+        console.log(i)
+        i /= 3
+        console.log(i)
+        i %= 3
+        console.log(i) 
+    
         console.log(!true)
         console.log((9 === '9') || (9 === 9))
         console.log((9 === '9') && (9 === 9))
+        */
+        let edad = 19
+        if (edad > 17) {
+            console.log('Mayor de edad.')
+        } else if (edad < 18) {
+            console.log('Menor de edad.')
+        } else {
+            console.log('No sabemos.')
+        }
+
+        let eresMayor = (edad > 17) ? "Mayor de edad" : "Mayor de edad"
+        console.log(eresMayor)
+
+        let dia = 3
+        switch (dia) {
+            case 1:
+                console.log("LUNES")
+                break
+            case 2:
+                console.log("MARTES")
+                break
+            case 3:
+                console.log("MIERCOLES")
+                break
+            case 4:
+                console.log("JUEVES")
+                break
+            case 5:
+                console.log("VIERNES")
+                break
+            default:
+                console.log("No existe tal día.")
+                break
+        }
+
+        console.log("Fin...")
     </script>
 </body>
 
