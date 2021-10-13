@@ -959,6 +959,26 @@ console.log(`${nombre} - ${apellido} - ${edad}`)
 Tomas - Escobar - 23
 ```
 
+## Objetos literales
+
+```
+let name = 'Copito'
+let age = 3
+
+let perro = {
+    name,
+    age,
+    ladrar() {
+        console.log('Wuao Wuao Wuao')
+    },
+    raza: 'Callejero'
+}
+console.log(perro)
+```
+```
+{name: 'Copito', age: 3, raza: 'Callejero', ladrar: ƒ}
+```
+
 # Programación Orientada a Objetos
 
 
