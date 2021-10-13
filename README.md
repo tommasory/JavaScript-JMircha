@@ -870,6 +870,39 @@ amarillo
 blanco
 ```
 
+## Manejo de Errores
+* TRY - CATCH
+```
+try {
+    console.log('Incio try.')
+    noexiste
+    console.log('Fin try.')
+} catch (error) {
+    console.log(`Ocurrio un error => ${error}`)
+} finally {
+    console.log("Siempre se ejecuta")
+}
+```
+```
+Incio try.
+Ocurrio un error => ReferenceError: noexiste is not defined
+Siempre se ejecuta
+```
+* TRY - CATCH - PERSONALIZADO
+```
+try {
+    let numero = '22'
+    if (typeof numero !== 'number') {
+        throw new Error('El caracter introducido no es un numero.')
+    }
+    console.log('Es un numero.')
+} catch (error) {
+    console.log(`Ocurrio un error => ${error}`)
+}
+```
+```
+Ocurrio un error => Error: El caracter introducido no es un numero.
+```
 
 # Programación Orientada a Objetos
 
