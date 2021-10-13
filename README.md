@@ -904,6 +904,36 @@ try {
 Ocurrio un error => Error: El caracter introducido no es un numero.
 ```
 
+## Break & Continue
+* **Break**
+Se detiene un bucle utilizando la palabra break. Detener un bucle significa salirse de él y dejarlo todo como está para continuar con el flujo del programa inmediatamente después del bucle.
+
+```
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        break
+    }
+    console.log(i)
+}
+```
+```
+0, 1, 2
+```
+
+* **Continue**
+Sirve para volver al principio del bucle en cualquier momento, sin ejecutar las líneas que haya por debajo de la palabra continue.
+```
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        continue
+    }
+    console.log(i)
+}
+```
+```
+0, 1, 2, 4
+```
+
 # Programación Orientada a Objetos
 
 
