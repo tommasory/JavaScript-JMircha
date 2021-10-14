@@ -160,7 +160,7 @@
             edad
         } = persona
         console.log(`${nombre} - ${apellido} - ${edad}`)
-        */
+        *
         let name = 'Copito'
         let age = 3
 
@@ -173,6 +173,27 @@
             raza: 'Callejero'
         }
         console.log(perro)
+        
+        function sumar(a, b, ...c) {
+            let resultado = a + b
+            c.forEach(function(n) {
+                resultado += n
+            })
+            return resultado
+        }
+        console.log(sumar(1, 2))
+        console.log(sumar(1, 2, 3))
+        console.log(sumar(1, 2, 3, 4))
+        console.log(sumar(1, 2, 3, 4, 5))
+        
+        const array_a = [7, 8, 9, 4, 5],
+            array_b = [1, 2, 3, 6]
+        console.log([array_a, array_b])
+        console.log([...array_a, array_b])
+        console.log([...array_a, ...array_b])
+        */
+
+
         console.log("Fin...")
     </script>
 </body>

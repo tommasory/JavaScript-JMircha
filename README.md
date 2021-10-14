@@ -979,6 +979,46 @@ console.log(perro)
 {name: 'Copito', age: 3, raza: 'Callejero', ladrar: ƒ}
 ```
 
+## Parámetros REST & Operador Spread
+**El parámetro REST**
+Esta característica   permite a una función recibir uno o n cantidad de parametros e incluso cero. Es importante mencionar que dicho parámetro  siempre retornara un array con los parámetros enviados. Para definir un parámetro REST es necesario anteponer   ...   al nombre del parámetro.
+
+```
+function sumar(a, b, ...c) {
+    let resultado = a + b
+    c.forEach(function(n) {
+        resultado += n
+    })
+    return resultado
+}
+console.log(sumar(1, 2))
+console.log(sumar(1, 2, 3))
+console.log(sumar(1, 2, 3, 4))
+console.log(sumar(1, 2, 3, 4, 5))
+```
+```
+3
+6
+10
+15
+```
+
+**SPREAD operator**
+El operador spread toma un array  y lo convierte en una lista de parámetros,  justo lo contrario del parámetro REST. Supongamos que tenemos un array de números y necesitamos saber el valor máximo de ellos; Utilizando el método estático de la clase Math lo podríamos hacer solo que este método no soporta arrays... Entonces empleamos  el operador SPREAD.
+
+```
+const array_a = [7, 8, 9, 4, 5],
+    array_b = [1, 2, 3, 6]
+console.log([array_a, array_b])
+console.log([...array_a, array_b])
+console.log([...array_a, ...array_b])
+```
+```
+(2) [Array(5), Array(4)]
+(6) [7, 8, 9, 4, 5, Array(4)]
+(9) [7, 8, 9, 4, 5, 1, 2, 3, 6]
+```
+
 # Programación Orientada a Objetos
 
 
