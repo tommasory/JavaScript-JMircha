@@ -984,6 +984,7 @@ console.log(perro)
 Esta característica   permite a una función recibir uno o n cantidad de parametros e incluso cero. Es importante mencionar que dicho parámetro  siempre retornara un array con los parámetros enviados. Para definir un parámetro REST es necesario anteponer   ...   al nombre del parámetro.
 
 ```
+// Función que suma vectores, recibe dos por defecto, pero puede sumar los que decee, gracias a que trabaja con un parámetro REST( array_c )
 function sumar(a, b, ...c) {
     let resultado = a + b
     c.forEach(function(n) {
@@ -1017,6 +1018,83 @@ console.log([...array_a, ...array_b])
 (2) [Array(5), Array(4)]
 (6) [7, 8, 9, 4, 5, Array(4)]
 (9) [7, 8, 9, 4, 5, 1, 2, 3, 6]
+```
+
+## Arrow Functions
+Capturan el objeto en el contexto donde se encuentren.
+
+### Una sola linea de codigo
+Sila la función tuviera que retornar en una sola linea, no es necesario colocar el return.
+```
+const sumar = (a = 0, b = 0) => console.log(a + b)
+sumar()
+sumar(4)
+sumar(4, 10)
+```
+```
+0, 4, 14
+```
+
+### Mas de una linea de codigo
+```
+const sumarVectores = (array_a, array_b, ...array_c) => {
+    let suma = [...array_a, ...array_b]
+    for (let v of array_c) {
+        suma = [...suma, ...v]
+    }
+    return suma
+}
+console.log(sumarVectores([1, 2], [3, 4, 5]))
+console.log(sumarVectores([1, 2], [3, 4, 5], [6, 7, 8]))
+console.log(sumarVectores([1, 2], [3, 4, 5], [6, 7, 8], [9]))
+console.log(sumarVectores([1, 2], [3, 4, 5], [6, 7, 8], [9], [0]))
+```
+```
+(5) [1, 2, 3, 4, 5]
+(8) [1, 2, 3, 4, 5, 6, 7, 8]
+(9) [1, 2, 3, 4, 5, 6, 7, 8, 9]
+(10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+```
+
+### Recorrer Array
+```
+let operaciones = ['suma', 'resta', 'multiplicación', 'división']
+operaciones.forEach((el, index) => console.log(`${el} : ${index}`))
+```
+```
+suma : 0
+resta : 1
+multiplicación : 2
+división : 3
+```
+### Capturan el objeto en el contexto donde se encuentren.
+No declarar este tipo de funciones dentro de objetos literales.
+
+* Contexto Local
+```
+const perro = {
+    nombre: "copito",
+    ladrar: function() {
+        console.log(this)
+    }
+}
+perro.ladrar()
+```
+```
+{nombre: 'copito', ladrar: ƒ}
+```
+* Contexto Global
+```
+const perro = {
+    nombre: "copito",
+    ladrar: () => {
+        console.log(this)
+    }
+}
+perro.ladrar()
+```
+```
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
 ```
 
 # Programación Orientada a Objetos
