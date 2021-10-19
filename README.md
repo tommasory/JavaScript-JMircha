@@ -1193,6 +1193,56 @@ Animal {nombre: 'copito', genero: 'macho'}
         [[Prototype]]: Object
 ```
 
+## Herencia Prototípica
+
+* Prototipo de tipo **FUNCIÓN CONSTRUCTORA**
+```
+// Herencia Prototipica
+function Perro(nombre, genero, tamanio) {
+    this.super = Animal
+    this.super(nombre, genero)
+    this.tamanio = tamanio
+}
+
+// Perro está heredando de Animal
+Perro.prototype = new Animal()
+Perro.prototype.constructor = Perro
+
+// Sobreescritura de métodos del Prototipo padre en el hijo.
+Perro.prototype.sonar = function() {
+        console.log("Soy un perro y mi sonido es un ladrar")
+    }
+// Método nuevo
+Perro.prototype.ladrar = function() {
+    console.log('wuao.. wuao.. wuao..')
+}
+
+const copito = new Perro('Copito', 'Macho', 'Mediano')
+console.log(copito)
+console.log(copito.sonar())
+```
+```
+Perro {nombre: 'Copito', genero: 'Macho', tamanio: 'Mediano', super: ƒ}
+    genero: "Macho"
+    nombre: "Copito"
+    super: ƒ Animal(nombre, genero)
+    tamanio: "Mediano"
+    [[Prototype]]: Animal
+        constructor: ƒ Perro(nombre, genero, tamanio)
+        genero: undefined
+        ladrar: ƒ ()
+        nombre: undefined
+        sonar: ƒ ()
+        [[Prototype]]: Object
+            sonar: ƒ ()
+            constructor: ƒ Animal(nombre, genero)
+            [[Prototype]]: Object
+-   -   -   -   -   -   -   -   -   -   -   -
+Soy un perro y mi sonido es un ladrar
+```
+
+
+
 # Objetos y Funciones del Lenguaje
 
 
