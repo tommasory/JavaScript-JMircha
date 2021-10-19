@@ -1099,6 +1099,99 @@ Window {window: Window, self: Window, document: document, name: '', location: L
 
 # Programación Orientada a Objetos
 
+**Clases**: Modelo a seguir.
+**Objetos**: Es una instancia de una clase.
+**Atributos**:los atributos son una propiedad o característica que se puede asignar a un objeto (elemento).
+**Métodos**:Son aquellas acciones que un objeto puede realizar.
+
+## Prototipos
+Las clases son una forma fácil de simplificarnos la escritura de los prototipos. JavaScript es un lenguaje orientado a objetos, basado en prototipos y no en clases. 
+Los motores de JavaScript transformar las clases en funciones prototipales.
+
+* Prototipo de tipo **OBJECT**
+```
+const animal = {
+    nombre: 'copito',
+    sonar() {
+        console.log('Hago sonidos porque estoy vivo.')
+    }
+}
+console.log(animal)
+```
+```
+{nombre: 'copito', sonar: ƒ}
+    nombre: "copito"
+    sonar: ƒ sonar()
+    [[Prototype]]: Object
+        constructor: ƒ Object()
+        hasOwnProperty: ƒ hasOwnProperty()
+        isPrototypeOf: ƒ isPrototypeOf()
+        propertyIsEnumerable: ƒ propertyIsEnumerable()
+        toLocaleString: ƒ toLocaleString()
+        toString: ƒ toString()
+        valueOf: ƒ valueOf()
+        __defineGetter__: ƒ __defineGetter__()
+        __defineSetter__: ƒ __defineSetter__()
+        __lookupGetter__: ƒ __lookupGetter__()
+        __lookupSetter__: ƒ __lookupSetter__()
+        __proto__: (...)
+        get __proto__: ƒ __proto__()
+        set __proto__: ƒ __proto__()
+```
+
+* Función **construcutora** con gasto de memoria.
+Se declaran dentro de la función constructora.
+```
+function Animal(nombre, genero) {
+    // Atributos
+    this.nombre = nombre
+    this.genero = genero
+
+    // Métodos
+    this.sonar = function() {
+        console.log('Hago sonidos porque estoy vivo')
+    }
+}
+const copito = new Animal('copito', 'macho')
+console.log(copito)
+```
+```
+Animal {nombre: 'copito', genero: 'macho', sonar: ƒ}
+    genero: "macho"
+    nombre: "copito"
+    sonar: ƒ ()
+    [[Prototype]]: Object
+        constructor: ƒ Animal(nombre, genero)
+        [[Prototype]]: Object
+```
+
+* Función **construcutora** con ahorro de memoria.
+Se declaran fuera de la función constructora.
+```
+// Función construcutora
+function Animal(nombre, genero) {
+    // Atributos
+    this.nombre = nombre
+    this.genero = genero
+}
+
+// Métodos
+Animal.prototype.sonar = function() {
+    console.log('Hago sonidos porque estoy vivo')
+}
+
+const copito = new Animal('copito', 'macho')
+console.log(copito)
+```
+```
+Animal {nombre: 'copito', genero: 'macho'}
+    genero: "macho"
+    nombre: "copito"
+    [[Prototype]]: Object
+        sonar: ƒ ()
+        constructor: ƒ Animal(nombre, genero)
+        [[Prototype]]: Object
+```
 
 # Objetos y Funciones del Lenguaje
 
