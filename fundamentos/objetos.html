@@ -69,6 +69,65 @@
         const copito = new Perro('Copito', 'Macho', 'Mediano')
         console.log(copito)
         console.log(copito.sonar())
+
+        class Animal{
+            // El constructor es un método especial que se ejecuta en el momento
+            // de instanciar la clase.
+            constructor(nombre, genero){
+                this.nombre = nombre
+                this.genero = genero
+            }
+
+            // Métodos
+            sonar(){
+                console.log('Hago sonidos porque estoy vivo')
+            }
+
+            saludar(){
+                console.log(`Hola me llamo ${this.nombre}`)
+            }
+        }
+
+        // const copito = new Animal('Copito', 'Macho')
+        // const morocho = new Animal('Morocho', 'Macho')
+
+        // Para consola
+        // console.log(copito)
+        // console.log(morocho)
+
+        // Para consola
+        // copito.saludar()
+        // morocho.saludar()
+
+        class Perro extends Animal{
+            constructor(nombre, genero, tamanio, edad){
+                // Con el metodo super() se manda a llamar el constructor de la clase padre.
+                super(nombre, genero)
+                this.tamanio = tamanio
+                this.edad = edad
+            }
+
+            // Método sobreescritos
+            sonar(){
+                console.log('Soy un perro y mi sonido es un ladrido')
+            }
+
+            // Métodos nuevos
+            ladrar(){
+                console.log('Guaao Guaao !!')
+            }
+
+            info_edad(){
+                console.log(`Hola me llamo ${this.nombre} y tengo ${this.edad} años.`)
+            }
+        }
+
+        const copito = new Animal('Copito', 'Macho')
+        const morocho = new Perro('Morocho', 'Macho', 'pequeño', 2)
+
+        // Para consola
+        console.log(copito)
+        console.log(morocho)
         */
 
         console.log("Fin...")

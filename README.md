@@ -1240,8 +1240,125 @@ Perro {nombre: 'Copito', genero: 'Macho', tamanio: 'Mediano', super: ƒ}
 -   -   -   -   -   -   -   -   -   -   -   -
 Soy un perro y mi sonido es un ladrar
 ```
+## Clases y Herencia
+### Clases
+Las clases de javascript, introducidas en ECMAScript 2015, son una mejora sintáctica sobre la herencia basada en prototipos de JavaScript. La sintaxis de las clases no introduce un nuevo modelo de herencia orientada a objetos en JavaScript. Las clases de JavaScript proveen una sintaxis mucho más clara y simple para crear objetos y lidiar con la herencia.
+
+```
+class Animal{
+    // El constructor es un método especial que se ejecuta en el momento
+    // de instanciar la clase.
+    constructor(nombre, genero){
+        this.nombre = nombre
+        this.genero = genero
+    }
+
+    // Métodos
+    sonar(){
+        console.log('Hago sonidos porque estoy vivo')
+    }
+
+    saludar(){
+        console.log(`Hola me llamo ${this.nombre}`)
+    }
+}
+
+const copito = new Animal('Copito', 'Macho')
+const morocho = new Animal('Morocho', 'Macho')
+
+// Para consola
+console.log(copito)
+console.log(morocho)
+
+// Para consola
+copito.saludar()
+morocho.saludar()
 
 
+```
+
+```
+Animal {nombre: 'Copito', genero: 'Macho'}
+    genero: "Macho"
+    nombre: "Copito"
+    [[Prototype]]: Object
+        constructor: class Animal
+        saludar: ƒ saludar()
+        sonar: ƒ sonar()
+        [[Prototype]]: Object
+
+Animal {nombre: 'Morocho', genero: 'Macho'}
+    genero: "Macho"
+    nombre: "Morocho"
+    [[Prototype]]: Object
+        constructor: class Animal
+        saludar: ƒ saludar()
+        sonar: ƒ sonar()
+        [[Prototype]]: Object
+```
+
+```
+Hola me llamo Copito
+Hola me llamo Morocho
+```
+
+### Herencia
+En JavaScript, cualquier función puede añadirse a un objeto como una propiedad. Una función heredada se comporta como cualquier otra propiedad, viéndose afectada por el solapamiento de propiedades como se muestra anteriormente (siendo, en este caso, una especie de redefinición de métodos)
+
+```
+class Perro extends Animal{
+    constructor(nombre, genero, tamanio, edad){
+        // Con el metodo super() se manda a llamar el constructor de la clase padre.
+        super(nombre, genero)
+        this.tamanio = tamanio
+        this.edad = edad
+    }
+
+    // Método sobreescritos
+    sonar(){
+        console.log('Soy un perro y mi sonido es un ladrido')
+    }
+
+    // Métodos nuevos
+    ladrar(){
+        console.log('Guaao Guaao !!')
+    }
+
+    info_edad(){
+        console.log(`Hola me llamo ${this.nombre} y tengo ${this.edad} años.`)
+    }
+}
+
+const copito = new Animal('Copito', 'Macho')
+const morocho = new Perro('Morocho', 'Macho', 'pequeño', 2)
+
+// Para consola
+console.log(copito)
+console.log(morocho)
+```
+
+```
+Animal {nombre: 'Copito', genero: 'Macho'}
+    genero: "Macho"
+    nombre: "Copito"
+    [[Prototype]]: Object
+        constructor: class Animal
+        saludar: ƒ saludar()
+        sonar: ƒ sonar()
+        [[Prototype]]: Object
+
+Perro {nombre: 'Morocho', genero: 'Macho', tamanio: 'pequeño', edad: 2}
+edad: 2
+    genero: "Macho"
+    nombre: "Morocho"
+    tamanio: "pequeño"
+    [[Prototype]]: Animal
+        constructor: class Perro
+        info_edad: ƒ info_edad()
+        ladrar: ƒ ladrar()
+        sonar: ƒ sonar()
+        [[Prototype]]: Object
+```
 
 # Objetos y Funciones del Lenguaje
 
