@@ -34,9 +34,36 @@
             arreglo[i] = i
         }
         console.timeEnd('Cuanto tiempo tarda mi código')
-        */
-
         
+        console.log(Date())
+       
+       // Fecha natural
+       console.log(fecha)
+       // Día del mes
+       console.log(`Día del mes: ${fecha.getDate()}`)
+       // Día de la semana
+       console.log(`Día de la semana: ${fecha.getDay()}`)
+       // Mes
+       console.log(`Mes: ${fecha.getMonth()}`)
+       // Año actual
+       console.log(`Año actual: ${fecha.getFullYear()}`)
+       // Hora actual
+       console.log(`Hora: ${fecha.getHours()}`)
+       // Minutos actuales
+       console.log(`Minutos: ${fecha.getMinutes()}`)
+       // Segundos actuales
+       console.log(`Segundos: ${fecha.getSeconds()}`)
+       // Milisegundos actuales
+       console.log(`Milisegundos: ${fecha.getMilliseconds()}`)
+       
+       let fecha = new Date()
+       console.log(fecha.toString())
+       console.log(fecha.toDateString())
+       console.log(fecha.toLocaleDateString())
+       console.log(fecha.toLocaleTimeString())
+       console.log(fecha.getTimezoneOffset())
+       */
+
         console.log("Fin...")
     </script>
 </body>

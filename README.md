@@ -1550,6 +1550,58 @@ Cuanto tiempo tarda mi código: 27.555908203125 ms
 * Cuantas veces se ejecuta una línea de código - Count()
 * Pequeñas pruebas unitarias - assert()
 
+## Objeto Date
+Todos objetos sirven en el JavaScript del lado del servidor y del lado del navegador.
+
+* Date() de forma natural.
+```
+console.log(Date())
+```
+```
+Wed Oct 27 2021 10:42:38 GMT-0500 (hora estándar de Colombia)
+```
+
+* Métodos de Date() por separado.
+```
+let fecha = new Date()
+console.log(fecha)
+console.log(`Día del mes: ${fecha.getDate()}`)
+console.log(`Día de la semana: ${fecha.getDay()}`)
+console.log(`Mes: ${fecha.getMonth()}`)
+console.log(`Año actual: ${fecha.getFullYear()}`)
+console.log(`Hora: ${fecha.getHours()}`)
+console.log(`Minutos: ${fecha.getMinutes()}`)
+console.log(`Segundos: ${fecha.getSeconds()}`)
+console.log(`Milisegundos: ${fecha.getMilliseconds()}`)
+```
+```
+Wed Oct 27 2021 11:18:19 GMT-0500 (hora estándar de Colombia)
+Día del mes: 27
+Día de la semana: 3
+Mes: 9
+Año actual: 2021
+Hora: 11
+Minutos: 18
+Segundos: 19
+Milisegundos: 888
+```
+
+* Métodos de Date(), fecha completa.
+```
+let fecha = new Date()
+console.log(fecha.toString())
+console.log(fecha.toDateString())
+console.log(fecha.toLocaleDateString())
+console.log(fecha.toLocaleTimeString())
+console.log(fecha.getTimezoneOffset())
+```
+```
+Wed Oct 27 2021 11:28:59 GMT-0500 (hora estándar de Colombia)
+Wed Oct 27 2021
+27/10/2021
+11:28:59
+300
+```
 
 
 # Ejercicios de Lógica de Programación
