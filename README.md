@@ -1703,6 +1703,22 @@ El operador ! recomendamos no usarlo hasta que se tenga una cierta destreza en p
 * **Cortocircuito AND:**Cuando el valor de la izquierda en la expresión siempre siempre pueda validar a **false**, es el valor que se cargará por defecto.
 
 
+## Alert, Confirm y Prompt
+**Solo para el JavaScript de los navegadores**
+```
+let alerta = alert('Está es una alerta')
+let confirmacion = confirm('Esto es una confirmación')
+let aviso = prompt('Permite ingresar valores')
+
+console.log(alerta)
+console.log(confirmacion)
+console.log(aviso)
+```
+```
+undefined
+true
+Hola
+```
 
 # Ejercicios de Lógica de Programación
 
