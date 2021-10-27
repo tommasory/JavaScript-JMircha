@@ -1720,6 +1720,33 @@ true
 Hola
 ```
 
+## Expresiones Regulares
+Las expresiones regulares son patrones que se utilizan para hacer coincidir combinaciones de caracteres en cadenas. En JavaScript, las expresiones regulares también son objetos. Estos patrones se utilizan con los métodos exec() y test() de RegExp, y con match(), matchAll(), replace(), replaceAll() (en-US), search() y split() métodos de String. Este capítulo describe las expresiones regulares de JavaScript, mas en [JavaScriptWeb](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions).
+
+* Las expresiones regulares reciben dos valores, el primero es la cadena a buscar, el segundo son los comidnes o banderas, muy importante este ultimo. 
+
+* [expReg01, expReg02]
+
+```
+let cadena = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi necessitatibus asperiores iure accusamus quas. Eaque alias velit placeat. Iste, nemo. Tenetur laborum iusto perferendis, repudiandae quidem possimus adipisci. Corporis, esta'
+
+let expReg01 = new RegExp("lorem","i")
+let expReg02 = /lorem/i
+
+console.log(expReg01.test(cadena))
+console.log(expReg01.exec(cadena))
+
+console.log(expReg02.test(cadena))
+console.log(expReg02.exec(cadena))
+```
+```
+true
+['Lorem', index: 0, input: 'Lorem ipsum dolor sit, amet consectetur adipisicin…udiandae quidem possimus adipisci. Corporis, esta', groups: undefined]
+
+true
+['Lorem', index: 0, input: 'Lorem ipsum dolor sit, amet consectetur adipisicin…udiandae quidem possimus adipisci. Corporis, esta', groups: undefined]
+```
+
 # Ejercicios de Lógica de Programación
 
 

@@ -71,7 +71,7 @@
        console.log(Math.sqrt(81))
        console.log(Math.pow(4,3))
        console.log(Math.sign(-0.3))
-       console.log(Math.random() * 10)
+       console.log(Math.random() * 10) 
         
         let alerta = alert('Está es una alerta')
         let confirmacion = confirm('Esto es una confirmación')
@@ -80,10 +80,18 @@
         console.log(alerta)
         console.log(confirmacion)
         console.log(aviso)
-        */
-
         
+        let cadena = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi necessitatibus asperiores iure accusamus quas. Eaque alias velit placeat. Iste, nemo. Tenetur laborum iusto perferendis, repudiandae quidem possimus adipisci. Corporis, esta'
 
+        let expReg01 = new RegExp("lorem","i")
+        let expReg02 = /lorem/i
+
+        console.log(expReg01.test(cadena))
+        console.log(expReg01.exec(cadena))
+
+        console.log(expReg02.test(cadena))
+        console.log(expReg02.exec(cadena))
+        */
 
        console.log("Fin...")
     </script>
