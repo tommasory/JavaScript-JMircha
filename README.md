@@ -1458,6 +1458,99 @@ Criollo
 
 # Objetos y Funciones del Lenguaje
 
+## Objeto console
+```
+console.log(console)
+```
+* Métodos del Objeto
+```
+assert: ƒ assert()
+clear: ƒ clear()
+context: ƒ context()
+count: ƒ count()
+countReset: ƒ countReset()
+debug: ƒ debug()
+dir: ƒ dir()
+dirxml: ƒ dirxml()
+error: ƒ error()
+group: ƒ group()
+groupCollapsed: ƒ groupCollapsed()
+groupEnd: ƒ groupEnd()
+info: ƒ info()
+log: ƒ log()
+memory: MemoryInfo {totalJSHeapSize: 10000000, usedJSHeapSize: 10000000, jsHeapSizeLimit: 2190000000}
+profile: ƒ profile()
+profileEnd: ƒ profileEnd()
+table: ƒ table()
+time: ƒ time()
+timeEnd: ƒ timeEnd()
+timeLog: ƒ timeLog()
+timeStamp: ƒ timeStamp()
+trace: ƒ trace()
+warn: ƒ warn()
+Symbol(Symbol.toStringTag): "Object"
+[[Prototype]]: Object
+```
+
+### Prueba de Métodos
+* Error, Warn, Info
+```
+console.error('Esto es un error')
+console.warn('Esto es un aviso')
+console.info('Esto es un mensaje informativo')
+console.log('Registro de lo que pasa en nuestra aplicación')
+```
+```
+Esto es un error
+Esto es un aviso
+Esto es un mensaje informativo
+Registro de lo que pasa en nuestra aplicación
+```
+* Log
+```
+let nombre = 'Tomas Jesus', apellido = 'Escobar Cueltan', edad = 23
+
+console.log(nombre, apellido,edad)
+console.log(`Mi nombre es ${nombre} ${apellido} y tengo ${edad} años.`)
+console.log(`Mi nombre es %s %s y tengo %d años.`,nombre,apellido,edad)
+```
+```
+Tomas Jesus Escobar Cueltan 23
+Mi nombre es Tomas Jesus Escobar Cueltan y tengo 23 años.
+Mi nombre es Tomas Jesus Escobar Cueltan y tengo 23 años.
+```
+
+* Group, GroupCollapsed
+```
+console.group('Mis características personales')
+console.log('Nombre: Tomas Jesus Escobar Cueltan')
+console.log('Edad: 23')
+console.log('Carrera Universitaria: Ingeniería de sistemas')
+console.groupEnd()
+```
+```
+Mis características personales
+    Nombre: Tomas Jesus Escobar Cueltan
+    Edad: 23
+    Carrera Universitaria: Ingeniería de sistemas
+```
+### Cuanto tiempo tarda el código en ejecutar
+* Time
+```
+console.time('Cuanto tiempo tarda mi código')
+const arreglo = Array(1000000)
+for (let i = 0; i < arreglo.length; i++) {
+    arreglo[i] = i
+}
+console.timeEnd('Cuanto tiempo tarda mi código')
+```
+```
+Cuanto tiempo tarda mi código: 27.555908203125 ms
+```
+* Cuantas veces se ejecuta una línea de código - Count()
+* Pequeñas pruebas unitarias - assert()
+
+
 
 # Ejercicios de Lógica de Programación
 
