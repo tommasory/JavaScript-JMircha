@@ -1603,6 +1603,17 @@ Wed Oct 27 2021
 300
 ```
 
+### Moment. js
+Moment. js es una librería que nos permite solventar estos problemas e implementa un sistema de manejo de fechas mucho más cómodo
+
+* https://momentjs.com/
+
+1. Format Dates
+2. Relative Time
+3. Calendar Time
+4. Multiple Locale Support
+
+
 
 # Ejercicios de Lógica de Programación
 
