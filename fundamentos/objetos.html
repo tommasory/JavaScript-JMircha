@@ -128,8 +128,42 @@
         // Para consola
         console.log(copito)
         console.log(morocho)
-        */
+        
 
+        class Animal{
+            // El constructor es un método especial que se ejecuta en el momento
+            // de instanciar la clase.
+            constructor(nombre, genero){
+                this.nombre = nombre
+                this.genero = genero
+                this.raza = null
+            }
+
+            // Un método estático se puede ejecutar sin instanciar la clase.
+            static queEres(){
+                console.log('Hola soy un metodo estático de la clase animal.')
+            }
+
+            get getRaza(){
+                return this.raza
+            }
+
+            set setRaza(raza){
+                this.raza = raza
+            }
+        }
+
+        const copito = new Animal('Copito', 'Macho')
+
+        // Para consola
+        console.log(copito)
+
+        // Para consola
+        console.log(copito.getRaza)
+        copito.setRaza = 'Criollo'
+        console.log(copito.getRaza)
+        */
+       
         console.log("Fin...")
     </script>
 </body>

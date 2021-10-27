@@ -1360,6 +1360,102 @@ edad: 2
         [[Prototype]]: Object
 ```
 
+## Métodos estáticos, getters y setters
+
+* No se pueden crear clases o Metodos privados en JavaScript.
+* No existen clases abstractas
+
+### Métodos Estáticos
+```
+class Animal{
+    // El constructor es un método especial que se ejecuta en el momento
+    // de instanciar la clase.
+    constructor(nombre, genero){
+        this.nombre = nombre
+        this.genero = genero
+    }
+
+    // Métodos
+    sonar(){
+        console.log('Hago sonidos porque estoy vivo')
+    }
+
+    saludar(){
+        console.log(`Hola me llamo ${this.nombre}`)
+    }
+
+    // Un método estático se puede ejecutar sin instanciar la clase.
+    static queEres(){
+        console.log('Hola soy un metodo estático de la clase animal.')
+    }
+}
+
+const copito = new Animal('Copito', 'Macho')
+
+// Para consola
+Animal.queEres()
+```
+```
+Hola soy un metodo estático de la clase animal.
+```
+
+### Métodos getters y setters
+
+```
+class Animal{
+    // El constructor es un método especial que se ejecuta en el momento
+    // de instanciar la clase.
+    constructor(nombre, genero){
+        this.nombre = nombre
+        this.genero = genero
+        this.raza = null
+    }
+
+    // Un método estático se puede ejecutar sin instanciar la clase.
+    static queEres(){
+        console.log('Hola soy un metodo estático de la clase animal.')
+    }
+
+    get getRaza(){
+        return this.raza
+    }
+
+    set setRaza(raza){
+        this.raza = raza
+    }
+}
+
+const copito = new Animal('Copito', 'Macho')
+
+// Para consola
+console.log(copito)
+
+// Para consola
+console.log(copito.getRaza)
+copito.setRaza = 'Criollo'
+console.log(copito.getRaza)
+```
+
+```
+Animal {nombre: 'Copito', genero: 'Macho', raza: null}
+    genero: "Macho"
+    nombre: "Copito"
+    raza: "Criollo"
+    getRaza: (...)
+    [[Prototype]]: Object
+        constructor: class Animal
+        getRaza: (...)
+        get getRaza: ƒ getRaza()
+        set setRaza: ƒ setRaza(raza)
+        [[Prototype]]: Object
+```
+
+```
+null
+// Llamamos al metodo de << setRaza >>
+Criollo
+```
+
 # Objetos y Funciones del Lenguaje
 
 
