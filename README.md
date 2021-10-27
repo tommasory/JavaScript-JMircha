@@ -1747,6 +1747,12 @@ true
 ['Lorem', index: 0, input: 'Lorem ipsum dolor sit, amet consectetur adipisicin…udiandae quidem possimus adipisci. Corporis, esta', groups: undefined]
 ```
 
+## Funciones Anónimas Autoejecutables
+
+Es algo viejo que casi no se utiliza
+
+
+
 # Ejercicios de Lógica de Programación
 
 
