@@ -1691,6 +1691,17 @@ console.log(Math.random() * 10)
 7.4906242617339425
 ```
 
+## Operador de Cortocircuito
+Los operadores && y || se llaman operadores en cortocircuito porque si no se cumple la condición de un término no se evalúa el resto de la operación. Por ejemplo: (a == b && c != d && h >= k) tiene tres evaluaciones: la primera comprueba si la variable a es igual a b. Si no se cumple esta condición, el resultado de la expresión es falso y no se evalúan las otras dos condiciones posteriores.
+
+En un caso como ( a < b || c != d || h <= k) se evalúa si a es menor que b. Si se cumple esta condición el resultado de la expresión es verdadero y no se evalúan las otras dos condiciones posteriores.
+
+El operador ! recomendamos no usarlo hasta que se tenga una cierta destreza en programación. Una expresión como (!esVisible) devuelve false si (esVisible == true), o true si (esVisible == false). En general existen expresiones equivalentes que permiten evitar el uso de este operador cuando se desea.
+
+* **Cortocircuito OR:**Cuando el valor de la izquierda en la expresión siempre siempre pueda validar a **true**, es el valor que se cargará por defecto.
+
+* **Cortocircuito AND:**Cuando el valor de la izquierda en la expresión siempre siempre pueda validar a **false**, es el valor que se cargará por defecto.
+
 
 
 # Ejercicios de Lógica de Programación
