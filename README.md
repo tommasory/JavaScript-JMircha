@@ -1780,12 +1780,17 @@ function dividir(a, b){
 export const math_basicas = {
     sumar, restar, multiplicar, dividir
 }
+
+// Esta función no hay necesidad de importar donde se llame al modulo aritmetica.js
+export default function saludar(name = 'desconocido') {
+    console.log(`Hola ${name} soy la función por defecto del modulo aritmetica.js`)
+}
 ```
 
 * Archivo **modulos.js**
 ```
 import {Num_PI} from "./constantes.js"
-import {math_basicas} from "./aritmetica.js"
+import saludar, {math_basicas} from "./aritmetica.js"
 // Le podemos colocar alias al importar, como:
 // import {math_basicas as mb} from "./aritmetica.js"
 
@@ -1795,6 +1800,8 @@ console.log(math_basicas.sumar(12, 4))
 console.log(math_basicas.restar(12, 4))
 console.log(math_basicas.multiplicar(12, 4))
 console.log(math_basicas.dividir(12, 4))
+// Llamado de la función por defecto del modulo aritmetica.js.
+saludar('Tomas Escobar')
 ```
 
 * Archivo **modulos.html**
@@ -1821,6 +1828,7 @@ Funciones basicas
 8
 48
 3
+Hola Tomas Escobar soy la función por defecto del modulo aritmetica.js
 ```
 
 ### Notas
