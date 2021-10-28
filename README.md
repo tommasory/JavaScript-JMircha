@@ -1752,8 +1752,85 @@ true
 Es algo viejo que casi no se utiliza
 
 ## Módulos ( import / export )
+Con estas cualidades podemos crear el codigo en modulos distintos y podemos llamarlos desde cualquier lado.
 
+* Archivo **constantes.js**
+```
+export const Num_PI = Math.PI
+```
 
+* Archivo **aritmetica.js**
+```
+function sumar(a, b){
+    return a + b
+}
+
+function restar(a, b){
+    return a - b
+}
+
+function multiplicar(a, b){
+    return a * b
+}
+
+function dividir(a, b){
+    return a / b
+}
+
+export const math_basicas = {
+    sumar, restar, multiplicar, dividir
+}
+```
+
+* Archivo **modulos.js**
+```
+import {Num_PI} from "./constantes.js"
+import {math_basicas} from "./aritmetica.js"
+// Le podemos colocar alias al importar, como:
+// import {math_basicas as mb} from "./aritmetica.js"
+
+console.log(Num_PI)
+console.log('Funciones basicas')
+console.log(math_basicas.sumar(12, 4))
+console.log(math_basicas.restar(12, 4))
+console.log(math_basicas.multiplicar(12, 4))
+console.log(math_basicas.dividir(12, 4))
+```
+
+* Archivo **modulos.html**
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulos ( import / export )</title>
+</head>
+<body>
+    <script src="js/modulos.js" type="module"></script>
+</body>
+</html>
+```
+
+* Resultado en consola del archivo **modulos.html**
+```
+3.141592653589793
+Funciones basicas
+16
+8
+48
+3
+```
+
+### Notas
+* **modulos.html**
+**src:** Carga el archivo JavaScript **modulos.js**.
+**type:** Le damos la propiedad de poder importar otros archivos punto JavaScript.
+```
+<script src="js/modulos.js" type="module"></script>
+```
+ 
 
 # Ejercicios de Lógica de Programación
 
