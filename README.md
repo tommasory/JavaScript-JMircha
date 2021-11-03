@@ -1889,32 +1889,3 @@ let temporizador = setInterval(() => {
 clearInterval(temporizador)
 ```
 
-# Nuevos Tipos y Características
-
-
-# this en JavaScript
-
-
-# JSON: JavaScript Object Notation
-
-
-# DOM: Document Object Model
-
-
-# Ejercicios Prácticos del DOM
-
-
-# AJAX: Asynchronous JavaScript And XML
-
-
-# APIs REST
-
-
-# Ejercicios Prácticos de AJAX y APIs
-
-
-# Single Page Applications (SPA)
-
-
-# Reactividad
-
