@@ -1845,6 +1845,49 @@ Hola Tomas Escobar soy la función por defecto del modulo aritmetica.js
 
 # Programación Asíncrona
 
+## Temporizadores (setTimeout & setInterval)
+### **SetTimeout** - Ejecuta
+```
+console.log("Inicio.")
+setTimeout(() => {
+    console.log('Ejecutando un setTimeout, esto se ejecuta una sola vez')
+}, 3000);
+console.log("Fin.")
+```
+```
+Inicio.
+Fin.
+Ejecutando un setTimeout, esto se ejecuta una sola vez
+```
+* Terminara de ejecutar un **SetTimeout**
+```
+let temporizador = setTimeout(() => {
+    console.log('Ejecutando un setTimeout, esto se ejecuta una sola vez')
+}, 3000);
+clearTimeout(temporizador)
+```
+
+### **SetInterval** - Ejecuta
+```
+console.log("Inicio.")
+setInterval(() => {
+    console.log('Ejecutando un setInterval, esto se ejecuta cada cierto intervalo de tiempo')
+}, 3000);
+console.log("Fin.")
+```
+```
+Inicio.
+Fin.
+# Este mensaje sigue apareciendo N Veces.
+Ejecutando un setInterval, esto se ejecuta cada cierto intervalo de tiempo
+```
+* Terminara de ejecutar un **SetInterval**
+```
+let temporizador = setInterval(() => {
+    console.log('Ejecutando un setInterval, esto se ejecuta cada cierto intervalo de tiempo')
+}, 3000);
+clearInterval(temporizador)
+```
 
 # Nuevos Tipos y Características
 
