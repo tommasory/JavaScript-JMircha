@@ -56,6 +56,44 @@
         }
 
         uno();*/
+        /*
+        function cuadradoCallback(value, callback) {
+            let  tiempo = 0 | (Math.random() * 10000)
+            console.log(`Orden y tiempo: ${value} Num,${tiempo} Msg`)
+            setTimeout(() => {
+                callback(value, value * value);
+            }, tiempo); // Temporizador dinamico
+        }
+
+        for (let i = 2; i < 6; i++) {
+            cuadradoCallback(i, (value, result) => {
+                console.log('Incia Callback');
+                console.log(`Callback: ${value}, ${result}`)
+            })
+        }*/
+        /*
+        function cuadradoCallback(value, callback) {
+            let  tiempo = 0 | (Math.random() * 10000)
+            console.log(`Orden y tiempo: ${value} Num,${tiempo} Msg`)
+            setTimeout(() => {
+                callback(value, value * value);
+            }, tiempo); // Temporizador dinamico
+        }
+
+        cuadradoCallback(2, (value, result) => {
+            console.log('Incia Callback');
+            console.log(`Callback: ${value}, ${result}`)
+            cuadradoCallback(3, (value, result) => {
+                console.log(`Callback: ${value}, ${result}`)
+                cuadradoCallback(4, (value, result) => {
+                    console.log(`Callback: ${value}, ${result}`)
+                    cuadradoCallback(5, (value, result) => {
+                        console.log(`Callback: ${value}, ${result}`)
+                    })
+                })
+            })
+        })
+        */
 
         console.log("Fin.")
     </script>

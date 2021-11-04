@@ -115,3 +115,124 @@ Dos
 ## Herramienta para probar códigos de está naturaleza
 link: [loupe](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
 
+
+## Mecanismos asíncronos en JavaScript
+Para controlar la asincronía, JavaScript cuenta con algunos mecanismos:
+
+* **Callbacks**.
+* **Promises**.
+* **Async / Await**.
+
+## Callbacks
+Una **callback** (llamada de vuelta) es una función que se ejecutará después de que otra lo haga.
+
+Es un mecanismo para asegurar que cierto código no se ejecute hasta que otro haya terminado.
+
+Al ser JavaScript un lenguaje orientado a eventos, las **callbacks** son una buena técnica para controlar la asíncronía, sin embargo... *Callback Hell* 😈🤘.
+
+```
+function cuadradoCallback(value, callback) {
+  setTimeout(() => {
+    callback(value, value * value);
+  }, 0 | (Math.random() * 1000));
+}
+
+cuadradoCallback(0, (value, result) => {
+  console.log("Inicia Callback");
+  console.log(`Callback: ${value}, ${result}`);
+  cuadradoCallback(1, (value, result) => {
+    console.log(`Callback: ${value}, ${result}`);
+    cuadradoCallback(2, (value, result) => {
+      console.log(`Callback: ${value}, ${result}`);
+      cuadradoCallback(3, (value, result) => {
+        console.log(`Callback: ${value}, ${result}`);
+        cuadradoCallback(4, (value, result) => {
+          console.log(`Callback: ${value}, ${result}`);
+          cuadradoCallback(5, (value, result) => {
+            console.log(`Callback: ${value}, ${result}`);
+            console.log("Fin Callback");
+            console.log("Callback Hell !!!!!😈🤘");
+            console.log("http://callbackhell.com/");
+          });
+        });
+      });
+    });
+  });
+});
+```
+
+### Example Callbacks
+* Llamadas en lista
+```
+console.log("Inicio.")
+function cuadradoCallback(value, callback) {
+    let  tiempo = 0 | (Math.random() * 10000)
+    console.log(`Orden y tiempo: ${value} Num,${tiempo} Msg`)
+    setTimeout(() => {
+        callback(value, value * value);
+    }, tiempo); // Temporizador dinamico
+}
+
+for (let i = 2; i < 6; i++) {
+    cuadradoCallback(i, (value, result) => {
+        console.log('Inicia Callback');
+        console.log(`Callback: ${value}, ${result}`)
+    })
+}
+console.log("Fin.")
+```
+```
+Inicio.
+Orden y tiempo: 2 Num,8509 Msg
+Orden y tiempo: 3 Num,4884 Msg
+Orden y tiempo: 4 Num,2192 Msg
+Orden y tiempo: 5 Num,8908 Msg
+Fin.
+Inicia Callback
+Callback: 4, 16
+Inicia Callback
+Callback: 3, 9
+Inicia Callback
+Callback: 2, 4
+Inicia Callback
+Callback: 5, 25
+```
+
+* Llamadas anidadas - **Callbacks**
+**Se ejecutará después de que otra lo haga.**
+```
+function cuadradoCallback(value, callback) {
+    let  tiempo = 0 | (Math.random() * 10000)
+    console.log(`Orden y tiempo: ${value} Num,${tiempo} Msg`)
+    setTimeout(() => {
+        callback(value, value * value);
+    }, tiempo); // Temporizador dinamico
+}
+
+cuadradoCallback(2, (value, result) => {
+    console.log('Inicia Callback');
+    console.log(`Callback: ${value}, ${result}`)
+    cuadradoCallback(3, (value, result) => {
+        console.log(`Callback: ${value}, ${result}`)
+        cuadradoCallback(4, (value, result) => {
+            console.log(`Callback: ${value}, ${result}`)
+            cuadradoCallback(5, (value, result) => {
+                console.log(`Callback: ${value}, ${result}`)
+            })
+        })
+    })
+})
+```
+```
+Inicio.
+Orden y tiempo: 2 Num,5631 Msg
+Fin.
+Inicia Callback
+Callback: 2, 4
+Orden y tiempo: 3 Num,1516 Msg
+Callback: 3, 9
+Orden y tiempo: 4 Num,5347 Msg
+Callback: 4, 16
+Orden y tiempo: 5 Num,7684 Msg
+```
+
