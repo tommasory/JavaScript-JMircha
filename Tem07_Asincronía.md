@@ -290,4 +290,16 @@ cuadradoPromise(2)
 console.log("Fin.")
 ```
 ```
+Inicio.
+Numero y tiempo: 2 Num,356 Msg
+Fin.
+Live reload enabled.
+Inicio Promise
+Promise: 2, 4
+Numero y tiempo: 3 Num,273 Msg
+Promise: 3, 9
+Numero y tiempo: 4 Num,906 Msg
+Promise: 4, 16
+Numero y tiempo: 5 Num,62 Msg
+Promise: 5, 25
 ```
