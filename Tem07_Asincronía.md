@@ -201,6 +201,7 @@ Callback: 5, 25
 * Llamadas anidadas - **Callbacks**
 **Se ejecutará después de que otra lo haga.**
 ```
+console.log("Inicio.")
 function cuadradoCallback(value, callback) {
     let  tiempo = 0 | (Math.random() * 10000)
     console.log(`Orden y tiempo: ${value} Num,${tiempo} Msg`)
@@ -222,6 +223,7 @@ cuadradoCallback(2, (value, result) => {
         })
     })
 })
+console.log("Fin.")
 ```
 ```
 Inicio.
@@ -236,3 +238,56 @@ Callback: 4, 16
 Orden y tiempo: 5 Num,7684 Msg
 ```
 
+## Promesas
+Nos sirve siempre y cuando **tengamos varios procesos asincronos**, por si no es asá podemos usar **Callback**.
+
+Una **promesa** es un objeto que representa el resultado de una operación asíncrona y tiene 3 estados posibles:
+
+1. Pendiente.
+2. Resuelta.
+3. Rechazada.
+
+Tienen la particularidad de que se pueden encadenar (**then**), siendo el resultado de una promesa, los datos de entrada de otra posible función.
+
+Las **promesas** mantienen un código más legible y mantenible que las callbacks, además tienen un mecanismo para la detección de errores (**catch**) que es posible usar en cualquier parte del flujo de datos.
+
+```
+console.log("Inicio.")
+function cuadradoPromise(value) {
+    if (typeof value !== "number") {
+        return Promise.reject(
+            `Error, el valor " ${value} " ingresado no es un número`
+        );
+    }
+    let  tiempo = 0 | (Math.random() * 1000)
+    console.log(`Numero y tiempo: ${value} Num,${tiempo} Msg`)
+    return new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            resolve({value, result:value * value})
+        }, tiempo); // Temporizador dinamico
+    })
+}
+
+cuadradoPromise(2)
+    .then((obj)=>{
+        console.log('Inicio Promise');
+        console.log(`Promise: ${obj.value}, ${obj.result}`)
+        return cuadradoPromise(3)
+    })
+    .then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.result}`)
+        return cuadradoPromise(4)
+    })
+    .then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.result}`)
+        return cuadradoPromise(5)
+    })
+    .then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.result}`)
+    }) // Corta el programa en tiempo real si ocurre un fallo en la funcion
+    .catch(err => console.error(err));
+
+console.log("Fin.")
+```
+```
+```

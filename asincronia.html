@@ -94,6 +94,40 @@
             })
         })
         */
+        /*
+        function cuadradoPromise(value) {
+            if (typeof value !== "number") {
+                return Promise.reject(
+                    `Error, el valor " ${value} " ingresado no es un número`
+                );
+            }
+            let  tiempo = 0 | (Math.random() * 1000)
+            console.log(`Numero y tiempo: ${value} Num,${tiempo} Msg`)
+            return new Promise((resolve, reject)=>{
+                setTimeout(() => {
+                    resolve({value, result:value * value})
+                }, tiempo); // Temporizador dinamico
+            })
+        }
+
+        cuadradoPromise(2)
+            .then((obj)=>{
+                console.log('Inicio Promise');
+                console.log(`Promise: ${obj.value}, ${obj.result}`)
+                return cuadradoPromise(3)
+            })
+            .then(obj => {
+                console.log(`Promise: ${obj.value}, ${obj.result}`)
+                return cuadradoPromise(4)
+            })
+            .then(obj => {
+                console.log(`Promise: ${obj.value}, ${obj.result}`)
+                return cuadradoPromise(5)
+            })
+            .then(obj => {
+                console.log(`Promise: ${obj.value}, ${obj.result}`)
+            }) // Corta el programa en tiempo real si ocurre un fallo en la funcion
+            .catch(err => console.error(err));*/
 
         console.log("Fin.")
     </script>
